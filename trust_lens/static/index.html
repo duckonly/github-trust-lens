@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GitHub Trust Lens</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace">
+        <header class="topbar">
+          <div class="brand">
+            <img class="brand-logo" src="/trust-lens-logo.png" alt="GitHub Trust Lens logo" />
+            <div class="brand-copy">
+              <h1>GitHub Trust Lens</h1>
+              <p class="brand-description">Complementary repository trust analysis</p>
+            </div>
+          </div>
+          <div class="status-pill" id="statusPill" data-state="idle">Idle</div>
+        </header>
+
+        <form id="analysisForm" class="analysis-form">
+          <label class="field repo-field">
+            <span>Repository</span>
+            <input id="repoInput" name="repo" required placeholder="owner/repo" autocomplete="off" />
+          </label>
+
+          <label class="field">
+            <span>Token</span>
+            <input id="tokenInput" name="token" type="password" placeholder="optional" autocomplete="off" />
+          </label>
+
+          <div class="number-grid">
+            <label class="field">
+              <span>Merged PRs</span>
+              <input name="merged_prs" type="number" min="10" max="100" value="50" />
+            </label>
+            <label class="field">
+              <span>Issues</span>
+              <input name="issues" type="number" min="10" max="100" value="40" />
+            </label>
+            <label class="field">
+              <span>Releases</span>
+              <input name="releases" type="number" min="1" max="30" value="10" />
+            </label>
+          </div>
+
+          <button class="primary-button" id="submitButton" type="submit">
+            <span>Analyze</span>
+          </button>
+        </form>
+
+        <section class="result-area" id="resultArea" hidden>
+          <div class="score-panel">
+            <div class="score-ring" id="scoreRing">
+              <strong id="scoreValue">--</strong>
+              <span id="gradeValue">--</span>
+            </div>
+            <div class="score-copy">
+              <p class="eyebrow">Repository</p>
+              <h2 id="repoName">-</h2>
+              <p id="repoDescription" class="description"></p>
+            </div>
+            <button class="secondary-button" id="exportJsonButton" type="button">Export JSON</button>
+          </div>
+
+          <div class="checks-list" id="checksList"></div>
+        </section>
+
+        <section class="empty-state" id="emptyState">
+          <h2>Enter a public GitHub repository.</h2>
+          <p>The UI runs the local Trust Lens analyzer and shows only checks outside the OpenSSF Scorecard scope.</p>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub Repo Trust Lens logo</title>
+  <desc id="desc">A magnifying glass focuses light onto a stylized attacker silhouette that dissolves into digital fragments.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="44%" r="68%">
+      <stop offset="0%" stop-color="#12314a"/>
+      <stop offset="68%" stop-color="#09192a"/>
+      <stop offset="100%" stop-color="#06111f"/>
+    </radialGradient>
+    <linearGradient id="lensGlass" x1="210" y1="170" x2="560" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#dff8ff" stop-opacity=".95"/>
+      <stop offset="48%" stop-color="#57d8ff" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity=".08"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="486" y1="444" x2="790" y2="624" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".95"/>
+      <stop offset="46%" stop-color="#60dcff" stop-opacity=".72"/>
+      <stop offset="100%" stop-color="#ffb84d" stop-opacity=".88"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="beamGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.2 0 0 0 0 0.85 0 0 0 0 1 0 0 0 .7 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="148" fill="url(#bg)"/>
+
+  <g opacity=".36">
+    <path d="M122 776h124M132 832h78M812 190h88M836 246h54M162 226h74" stroke="#27516f" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="850" cy="804" r="5" fill="#3c7897"/>
+    <circle cx="186" cy="692" r="4" fill="#3c7897"/>
+    <circle cx="768" cy="162" r="4" fill="#3c7897"/>
+  </g>
+
+  <g transform="rotate(-28 370 368)">
+    <circle cx="356" cy="332" r="178" fill="url(#lensGlass)" stroke="#c9f5ff" stroke-width="34"/>
+    <circle cx="356" cy="332" r="132" fill="none" stroke="#35c9f4" stroke-width="8" opacity=".45"/>
+    <path d="M486 468l178 178" stroke="#c9f5ff" stroke-width="54" stroke-linecap="round"/>
+    <path d="M486 468l178 178" stroke="#1aa8d5" stroke-width="28" stroke-linecap="round"/>
+    <path d="M272 246c38-34 92-48 142-34" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" opacity=".72"/>
+  </g>
+
+  <g filter="url(#beamGlow)">
+    <path d="M486 426L800 546L742 690L448 480Z" fill="url(#beam)" opacity=".82"/>
+    <path d="M508 452L780 568" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity=".9"/>
+    <path d="M490 486L748 648" stroke="#62e3ff" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+  </g>
+
+  <g transform="translate(700 520)">
+    <path d="M78 42c-18-36-58-54-96-40c-38 14-58 54-48 94l26 104h156l28-106c5-19 2-37-8-52c-10 17-28 30-50 30c-28 0-50-18-58-43c18 12 35 16 50 13Z" fill="#0b1320" stroke="#2f4e66" stroke-width="8"/>
+    <path d="M-16 94c20 24 58 25 80 0" fill="none" stroke="#1d3346" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-42 206h188l-22 64H-20Z" fill="#101b2a" stroke="#2f4e66" stroke-width="8"/>
+    <circle cx="18" cy="104" r="7" fill="#6be7ff"/>
+    <circle cx="72" cy="104" r="7" fill="#6be7ff"/>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <circle cx="760" cy="610" r="22" fill="#ffb84d"/>
+    <circle cx="760" cy="610" r="9" fill="#ffffff"/>
+  </g>
+
+  <g fill="#55dcff">
+    <rect x="848" y="518" width="18" height="18" rx="3"/>
+    <rect x="882" y="548" width="12" height="12" rx="2" opacity=".85"/>
+    <rect x="850" y="676" width="14" height="14" rx="2" opacity=".82"/>
+    <rect x="900" y="642" width="20" height="20" rx="3" opacity=".7"/>
+    <rect x="814" y="706" width="10" height="10" rx="2" opacity=".8"/>
+    <rect x="914" y="592" width="10" height="10" rx="2" opacity=".62"/>
+  </g>
+  <g fill="#ffb84d">
+    <rect x="820" y="580" width="13" height="13" rx="2"/>
+    <rect x="872" y="704" width="10" height="10" rx="2" opacity=".8"/>
+    <rect x="900" y="506" width="9" height="9" rx="2" opacity=".76"/>
+  </g>
+</svg>
