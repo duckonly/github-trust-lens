@@ -81,17 +81,3 @@ The UI uses the same analyzer as the CLI. The token field is optional and is onl
 - `E`: high concern
 
 The score is not an OpenSSF Scorecard replacement. It is designed to sit next to Scorecard and ask a different set of questions.
-
-## Maintainer Role Inference
-
-The tool does not rely only on `CODEOWNERS` or `MAINTAINERS`.
-
-It classifies accounts as:
-
-- `declared_maintainer`: found in ownership files.
-- `active_maintainer`: strong activity signal such as repeated PR merges or release creation.
-- `probable_maintainer`: repeated maintainer-like activity without direct rights proof, such as reviews plus issue triage.
-- `trusted_contributor`: some maintainer-like activity, but not enough for probable maintainer status.
-- `contributor`: weak or isolated activity only.
-
-This is an inferred signal, not a GitHub permission proof.
